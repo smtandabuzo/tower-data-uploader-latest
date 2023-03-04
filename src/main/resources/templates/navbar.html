@@ -1,0 +1,53 @@
+<!--<!DOCTYPE html>-->
+<!--<html xmlns:th="http://www.thymeleaf.org">-->
+<!--<head>-->
+<!--    <meta charset="UTF-8">-->
+<!--    <title>NavigationBar</title>-->
+<!--    <link th:href="@{/bootstrap.min.css}"-->
+<!--          rel="stylesheet">-->
+<!--    <link rel="stylesheet" href="/fontawesome/css/all.css"/>-->
+<!--    <style>-->
+<!--        body {-->
+<!--            background: linear-gradient(90deg, #C7C5F4, #776BCC);-->
+<!--        }-->
+<!--        .nav-link {-->
+<!--            color: #212529;-->
+<!--        }-->
+<!--        a {-->
+<!--            color: #212529;-->
+<!--            text-decoration: underline;-->
+<!--        }-->
+<!--    </style>-->
+<!--</head>-->
+<!--<body>-->
+<!--<header th:fragment="navbar" xmlns:th="http://www.w3.org/1999/xhtml">-->
+<nav th:fragment="navbar" class="navbar sticky-top navbar-expand-lg bg-info navbar-default" >
+    <div class="container-fluid">
+        <a class="navbar-brand" th:href="@{/index}">Home</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link " aria-current="page" th:href="@{/users}">Users</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link " aria-current="page" th:href="@{/register}">Register a user</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link " aria-current="page" th:href="@{/view-uploads}">View Uploads</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link " aria-current="page" th:href="@{/upload-file}">Manual Uploads</a>
+                </li>
+            </ul>
+        </div>
+        <a class="navbar-brand" th:href="@{/logout}" >Logout</a>
+    </div>
+</nav>
+<!--</header>-->
+<!--</body>-->
+<!--</html>-->
+<!--<script src="/jquery-2.1.3.min.js"></script>-->
+<!--<script src="/bootstrap.min.js"></script>-->

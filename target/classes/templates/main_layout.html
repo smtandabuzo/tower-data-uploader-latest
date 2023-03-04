@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns:layout="http://www.w3.org/1999/xhtml" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+
+    <link th:href="@{/bootstrap.min.css}"
+          rel="stylesheet">
+    <link rel="stylesheet" href="/fontawesome/css/all.css"/>
+    <style>
+        /*body {*/
+        /*    background: linear-gradient(90deg, #C7C5F4, #776BCC);*/
+        /*}*/
+        .nav-link {
+            color: #212529;
+        }
+        a {
+            color: #212529;
+            text-decoration: underline;
+        }
+    </style>
+<!--    <meta name="viewport" content="width=device-width, initial-scale=1">-->
+</head>
+<body>
+
+<div class="sticky-top" th:insert="navbar :: navbar">  </div>
+<br />
+<div layout:fragment="content"></div>
+<!--footer.html  that's here  -->
+<div th:insert="footer :: footer">  </div>
+</body>
+</html>
+<script src="/jquery-2.1.3.min.js"></script>
+<script src="/bootstrap.min.js"></script>

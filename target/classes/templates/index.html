@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://thymeleaf.org"
+>
+<head>
+    <meta charset="UTF-8">
+    <title>Data Uploader System</title>
+    <link th:href="@{/bootstrap.min.css}" rel="stylesheet">
+    <link rel="stylesheet" th:href="@{/font-awesome.min.css}">
+    <link rel="stylesheet" type="text/css" media="all" href="/style.css"/>
+    <style>
+        .nav-link {
+            color: #212529;
+        }
+        a {
+            color: #212529;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+<div th:insert="navbar :: navbar">  </div>
+<br />
+<br />
+<br />
+<div class="container">
+    <div class="row">
+        <h1 class="text-center"> Welcome to The Dashboard </h1>
+    </div>
+    <div id="layoutDrawer_content">
+        <!-- Main page content-->
+        <main>
+            <!-- Main dashboard content-->
+            <div class="container-xl p-5">
+                <div class="row justify-content-between align-items-center mb-5">
+                    <div class="col flex-shrink-0 mb-5 mb-md-0">
+                        <div class="text-muted">Overview &amp; summary</div>
+                    </div>
+
+                </div>
+                <!-- Colored status cards-->
+                <div class="row gx-5">
+                    <div class="col-xxl-3 col-md-6 mb-5">
+                        <div class="card card-raised bg-primary text-white">
+                            <div class="card-body px-4">
+                                <div class="d-flex justify-content-between align-items-center mb-2">
+                                    <div class="me-2">
+                                        <div class="display-5 text-white">101.1K</div>
+                                        <div class="card-text">Downloads</div>
+                                    </div>
+                                    <div class="icon-circle bg-white-50 text-primary"><i class="material-icons">download</i></div>
+                                </div>
+                                <div class="card-text">
+                                    <div class="d-inline-flex align-items-center">
+                                        <i class="material-icons icon-xs">arrow_upward</i>
+                                        <div class="caption fw-500 me-2">3%</div>
+                                        <div class="caption">from last month</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-6 mb-5">
+                        <div class="card card-raised bg-secondary text-white">
+                            <div class="card-body px-4">
+                                <div class="d-flex justify-content-between align-items-center mb-2">
+                                    <div class="me-2">
+                                        <div class="display-5 text-white">5.3K</div>
+                                        <div class="card-text">Customers</div>
+                                    </div>
+                                    <div class="icon-circle bg-white-50 text-secondary"><i class="material-icons">people</i></div>
+                                </div>
+                                <div class="card-text">
+                                    <div class="d-inline-flex align-items-center">
+                                        <i class="material-icons icon-xs">arrow_upward</i>
+                                        <div class="caption fw-500 me-2">3%</div>
+                                        <div class="caption">from last month</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="row gx-5">
+                    <!-- Privacy suggestions illustrated card-->
+                    <div class="col-xl-6 mb-5">
+                        <div class="card card-raised h-100">
+                            <div class="card-body p-4">
+                                <div class="d-flex justify-content-between">
+                                    <div class="me-4">
+                                        <h2 class="card-title mb-0">Privacy Suggestions</h2>
+                                        <p class="card-text">Take our privacy checkup to choose which settings are right for you.</p>
+                                    </div>
+                                    <img src="assets/img/illustrations/security.svg" alt="..." style="height: 6rem">
+                                </div>
+                            </div>
+                            <div class="card-footer bg-transparent position-relative ripple-gray px-4 mdc-ripple-upgraded"><a class="stretched-link text-decoration-none" href="#!">Review suggestions (4)</a></div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </main>
+        <div th:insert="footer :: footer">  </div>
+    </div>
+</div>
+</body>
+</html>
+<script src="/jquery-2.1.3.min.js"></script>
+<script src="/bootstrap.min.js"></script>

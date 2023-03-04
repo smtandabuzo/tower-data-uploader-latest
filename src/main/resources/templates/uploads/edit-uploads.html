@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:layout="http://www.w3.org/1999/xhtml" layout:decorate="~{main_layout}"
+      xmlns:th="http://thymeleaf.org"
+>
+<head>
+    <meta charset="UTF-8">
+    <title>File Upload System</title>
+    <link href="/bootstrap.min.css"
+          rel="stylesheet"
+    >
+    <link rel="stylesheet" href="/fontawesome/css/all.css"/>
+    <style>
+        .nav-link {
+            color: #212529;
+        }
+        a {
+            color: #212529;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+<!--<div th:insert="navbar :: navbar">  </div>-->
+<!--<br />-->
+<div layout:fragment="content"  class="row col-md-8 offset-md-2">
+    <div class="card">
+        <div th:if="${param.success}">
+            <div class="alert alert-info">Record successfully Updated!</div>
+        </div>
+        <div class="card-header">
+            <h2 class="text-center">Update Record</h2>
+        </div>
+        <div class="card-body">
+            <form method="post" role="form" th:action="@{/update-data/{id}(id=${id})}" th:object="${user}">
+                <div class="form-group mb-3">
+                    <label class="form-label">twr_pref</label>
+                    <input class="form-control"
+                           id="twr_pref"
+                           name="twr_pref"
+                           placeholder="Enter The twr_pref"
+                           th:field="*{twr_pref}"
+                           type="text"
+                    />
+                    <p th:errors="*{twr_pref}" class="text-danger"
+                       th:if="${#fields.hasErrors('twr_pref')}">
+                    </p>
+                </div>
+                <div class="form-group mb-3">
+                    <label class="form-label">twr_no</label>
+                    <input class="form-control"
+                           id="twr_no"
+                           name="twr_no"
+                           placeholder="Enter The twr_no"
+                           th:field="*{twr_no}"
+                           type="text"
+                    />
+                    <p th:errors="*{twr_no}" class="text-danger"
+                       th:if="${#fields.hasErrors('twr_no')}">
+                    </p>
+                </div>
+                <div class="form-group mb-3">
+                    <label class="form-label">pl_no</label>
+                    <input class="form-control"
+                           id="pl_no"
+                           name="pl_no"
+                           placeholder="Enter The pl_no"
+                           th:field="*{pl_no}"
+                           type="text"
+                    />
+                    <p th:errors="*{pl_no}" class="text-danger"
+                       th:if="${#fields.hasErrors('pl_no')}">
+                    </p>
+                </div>
+                <div class="form-group mb-3">
+                    <label class="form-label">isabend</label>
+                    <input class="form-control"
+                           id="isabend"
+                           name="isabend"
+                           placeholder="Enter The twr_no"
+                           th:field="*{isabend}"
+                           type="text"
+                    />
+                    <p th:errors="*{isabend}" class="text-danger"
+                       th:if="${#fields.hasErrors('isabend')}">
+                    </p>
+                </div>
+                <div class="form-group mb-3">
+                    <label class="form-label">twr_type</label>
+                    <input class="form-control"
+                           id="twr_type"
+                           name="twr_type"
+                           placeholder="Enter The twr_type"
+                           th:field="*{twr_type}"
+                           type="text"
+                    />
+                    <p th:errors="*{twr_type}" class="text-danger"
+                       th:if="${#fields.hasErrors('twr_type')}">
+                    </p>
+                </div>
+                <div class="form-group mb-3">
+                    <label class="form-label">sub_type</label>
+                    <input class="form-control"
+                           id="sub_type"
+                           name="sub_type"
+                           placeholder="Enter The sub_type"
+                           th:field="*{sub_type}"
+                           type="text"
+                    />
+                    <p th:errors="*{sub_type}" class="text-danger"
+                       th:if="${#fields.hasErrors('sub_type')}">
+                    </p>
+                </div>
+                <div class="form-group mb-3">
+                    <label class="form-label">cond_att</label>
+                    <input class="form-control"
+                           id="cond_att"
+                           name="cond_att"
+                           placeholder="Enter The cond_att"
+                           th:field="*{cond_att}"
+                           type="text"
+                    />
+                    <p th:errors="*{cond_att}" class="text-danger"
+                       th:if="${#fields.hasErrors('cond_att')}">
+                    </p>
+                </div>
+                <div class="form-group mb-3">
+                    <label class="form-label">tube_no</label>
+                    <input class="form-control"
+                           id="tube_no"
+                           name="tube_no"
+                           placeholder="Enter The tube_no"
+                           th:field="*{tube_no}"
+                           type="text"
+                    />
+                    <p th:errors="*{tube_no}" class="text-danger"
+                       th:if="${#fields.hasErrors('twr_no')}">
+                    </p>
+                </div>
+                <div class="form-group mb-3">
+                    <label class="form-label">sht_no</label>
+                    <input class="form-control"
+                           id="sht_no"
+                           name="sht_no"
+                           placeholder="Enter The sht_no"
+                           th:field="*{sht_no}"
+                           type="text"
+                    />
+                    <p th:errors="*{sht_no}" class="text-danger"
+                       th:if="${#fields.hasErrors('sht_no')}">
+                    </p>
+                </div>
+                <div class="form-group mb-3">
+                    <label class="form-label">crd_type</label>
+                    <input class="form-control"
+                           id="crd_type"
+                           name="crd_type"
+                           placeholder="Enter The crd_type"
+                           th:field="*{crd_type}"
+                           type="text"
+                    />
+                    <p th:errors="*{crd_type}" class="text-danger"
+                       th:if="${#fields.hasErrors('crd_type')}">
+                    </p>
+                </div>
+                <div class="form-group mb-3">
+                    <label class="form-label">twr_no</label>
+                    <input class="form-control"
+                           id="data_source"
+                           name="data_source"
+                           placeholder="Enter The data_source"
+                           th:field="*{data_source}"
+                           type="text"
+                    />
+                    <p th:errors="*{data_source}" class="text-danger"
+                       th:if="${#fields.hasErrors('data_source')}">
+                    </p>
+                </div>
+                <div class="form-group mb-3">
+                    <label class="form-label">accuracy</label>
+                    <input class="form-control"
+                           id="accuracy"
+                           name="accuracy"
+                           placeholder="Enter The accuracy"
+                           th:field="*{accuracy}"
+                           type="text"
+                    />
+                    <p th:errors="*{accuracy}" class="text-danger"
+                       th:if="${#fields.hasErrors('accuracy')}">
+                    </p>
+                </div>
+                <div class="form-group mb-3">
+                    <label class="form-label">date_captured</label>
+                    <input class="form-control"
+                           id="date_captured"
+                           name="date_captured"
+                           placeholder="Enter The date_captured"
+                           th:field="*{date_captured}"
+                           type="text"
+                    />
+                    <p th:errors="*{date_captured}" class="text-danger"
+                       th:if="${#fields.hasErrors('date_captured')}">
+                    </p>
+                </div>
+                <div class="form-group mb-3">
+                    <label class="form-label">tower_no</label>
+                    <input class="form-control"
+                           id="tower_no"
+                           name="tower_no"
+                           placeholder="Enter The tower_no"
+                           th:field="*{tower_no}"
+                           type="text"
+                    />
+                    <p th:errors="*{twr_no}" class="text-danger"
+                       th:if="${#fields.hasErrors('tower_no')}">
+                    </p>
+                </div>
+                <div class="form-group mb-3">
+                    <label class="form-label">lat</label>
+                    <input class="form-control"
+                           id="lat"
+                           name="lat"
+                           placeholder="Enter The twr_no"
+                           th:field="*{lat}"
+                           type="text"
+                    />
+                    <p th:errors="*{lat}" class="text-danger"
+                       th:if="${#fields.hasErrors('lat')}">
+                    </p>
+                </div>
+                <div class="form-group mb-3">
+                    <label class="form-label">long</label>
+                    <input class="form-control"
+                           id="long_"
+                           name="long_"
+                           placeholder="Enter The long"
+                           th:field="*{long_}"
+                           type="text"
+                    />
+                    <p th:errors="*{_long}" class="text-danger"
+                       th:if="${#fields.hasErrors('long_')}">
+                    </p>
+                </div>
+
+                <div class="form-group mb-3">
+                    <label class="form-label">height</label>
+                    <input class="form-control"
+                           id="height"
+                           name="height"
+                           placeholder="Enter The height"
+                           th:field="*{height}"
+                           type="text"
+                    />
+                    <p th:errors="*{height}" class="text-danger"
+                       th:if="${#fields.hasErrors('height')}">
+                    </p>
+                </div>
+                <div class="form-group mb-3">
+                    <button class="btn btn-primary" type="submit">Update Records</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+</div>
+<div th:insert="footer :: footer">  </div>
+</body>
+</html>
